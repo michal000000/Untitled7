@@ -1,0 +1,8 @@
+name: test
+on: push
+jobs: 
+  main: 
+    runs-on: ubuntu-latest
+    steps: 
+      -run: python -c "print('helloworld')" # uruchomienie polecenia powłoki
+      
