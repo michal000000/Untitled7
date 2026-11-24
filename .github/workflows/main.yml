@@ -5,8 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: install jupyter
-        run: pip install nbformat ipykernel
+        run: pip install nbformat ipykernel nbclient
       - run: python -c "print('helloworld')" # uruchomienie polecenia powłoki
       - uses: actions/checkout@v7
       - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+      - run: quarto render Untitled10.ipynb --execute --to pdf
 
