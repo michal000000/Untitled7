@@ -12,4 +12,8 @@ jobs:
         with:
           tinytex: true
       - run: quarto render Untitled10.ipynb --execute --to pdf
+      - uses: actions/upload-artifact@v7
+        with:
+          path: Untitled10.ipynb
+          archive: false
 
